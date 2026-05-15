@@ -14,6 +14,8 @@ let page;
 
 async function initBrowser() {
   const browser = await puppeteer.launch({
+    headless: 'new',
+    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/opt/render/.cache/puppeteer/chrome/linux-121.0.6167.85/chrome-linux64/chrome',
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
   page = await browser.newPage();
