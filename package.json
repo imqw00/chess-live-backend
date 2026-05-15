@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "postinstall": "npx puppeteer browsers install chrome",
+    "postinstall": "node -e \"const puppeteer = require('puppeteer'); \"",
     "start": "node server.js"
   },
   "engines": {
